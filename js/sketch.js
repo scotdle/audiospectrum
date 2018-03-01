@@ -16,6 +16,8 @@ recordPlayer.start();
 audioSpectrum.parent('audiocanvas');
 
 
+
+
 }
 
 
@@ -23,9 +25,9 @@ function draw() {
    var volumeLevel= recordPlayer.getLevel();
     fft.setInput(recordPlayer);
     volhistory.push(volumeLevel);
-    background(255);
+    background('#282828');
     stroke(0);
-    noFill();
+fill('#1ED760');
     var spectrum = fft.analyze();
     smooth(0.9);
     for(i = 0; i < spectrum.length; i++) {
