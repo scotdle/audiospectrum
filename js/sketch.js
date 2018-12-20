@@ -3,7 +3,10 @@ var recordPlayer;
 var fft;
 var volhistory = [];
 var widthOfBand;
+
+
 function setup() {
+
     var audioCanvas = document.getElementById('audiocanvas');
     var width = audioCanvas.offsetWidth;
   var audioSpectrum = createCanvas(width, 500);
@@ -37,7 +40,8 @@ fill('#1ED760');
       rect(i * widthOfBand, y, widthOfBand, height - y);
 
     }
-    console.log(spectrum.length);
+    getAudioContext().resume();
 
 }
+
 
